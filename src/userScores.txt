@@ -1,0 +1,5 @@
+Viet, 200
+Quang, 0
+Chinh, 400
+Long, 100
+Godlike, 14.81
