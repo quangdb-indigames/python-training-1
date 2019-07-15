@@ -66,8 +66,11 @@ def showLeaderBoard():
 
 		new_data.sort(key = last_ele, reverse = True)
 
-		for user in new_data:
-			print("User: " + user[0] + "	Score: " + str(user[1]))
+		range_show = 10
+		if len(new_data) < 10:
+			range_show = len(new_data)
+		for index in range(0, range_show):
+			print("No." + str(index + 1) + " : " + new_data[index][0] + "	Score: " + str(new_data[index][1]))
 	except:
 		print("Have some error when try to show leader board!!!")
 	finally:
@@ -110,7 +113,7 @@ def validateQuestion(userAnswer, math):
 	
 	finalUserAnswer = round(float(userAnswer), 2)
 	finalAnswer = round(float(answer), 2)
-	
+
 	if finalUserAnswer == finalAnswer:
 		return True
 	else:
